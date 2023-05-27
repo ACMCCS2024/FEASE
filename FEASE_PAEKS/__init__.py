@@ -1,12 +1,11 @@
 '''
-Long Meng, Liqun Chen, Yangguang Tian, Mark Manulis, Suhui Liu
 
 | From: "FEASE: Fast and Expressive Asymmetric Searchable Encryption"
 | Notes: Implemented the scheme in Figure 3 
 | type:           Expressive PAEKS scheme
 | setting:        Type-III Pairing
 
-:Authors:         Long Meng
+:Authors:         
 :Date:            27/04/2023
 '''
 
