@@ -13,7 +13,6 @@ from FEASE_PAEKS import PAEKS_DL
 from FEASE_KPABE import Anonymous_KP_ABE
 from cwdwl17 import KPabe_search
 from mznlhs17 import MZNLHS17
-from tfl19 import TFL19
 import re, random, copy
 import time
 
@@ -414,7 +413,7 @@ def create_list_and_policy(n_1, n_2):
     for i in word_list:
         kw = i
         attr = i
-        kw = kw + ':' + str(random.choice(range(1, 100)))
+        kw = kw + ':' + str(random.choice(range(1, 1000)))
         kw_list.append(kw)
         attr_list.append(attr)
 
@@ -424,13 +423,13 @@ def create_list_and_policy(n_1, n_2):
     kw_policy, attr_policy = '', '' 
     for i, num in enumerate(indices):
         policy_name = word_list[num]        
-        k = random.choice(choice)    
+        #k = random.choice(choice)    
         
         if i in range(len(indices) - 1):  
-            kw_policy = kw_policy + policy_name + ':' + str(random.choice(range(1, 100))) + '' + k + ''
-            attr_policy = attr_policy + policy_name + k + ''
+            kw_policy = kw_policy + policy_name + ':' + str(random.choice(range(1, 1000))) + '' + ' AND ' + ''
+            attr_policy = attr_policy + policy_name + ' AND ' + ''
         else:       
-            kw_policy = kw_policy + policy_name + ':' + str(random.choice(range(1, 100)))
+            kw_policy = kw_policy + policy_name + ':' + str(random.choice(range(1, 1000)))
             attr_policy = attr_policy + policy_name
 
     return kw_list, kw_policy, attr_list, attr_policy     
@@ -461,15 +460,15 @@ def main():
     # choose a random message
     msg = pairing_group.random(GT)
     
-    list_size = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-    policy_size = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    list_size = [50]
+    policy_size = [10, 15, 20, 25, 30, 35, 40, 45, 50]
     
     for size_p in policy_size:
         for size_k in list_size:
             kw_list, kw_policy, attr_list, attr_policy = create_list_and_policy(size_k, size_p)
             
-            #run_peks(pairing_group, kw_policy, kw_list)
-            #run_paeks(pairing_group, kw_policy, kw_list)
+            run_peks(pairing_group, kw_policy, kw_list)
+            run_paeks(pairing_group, kw_policy, kw_list)
             run_dpeks(pairing_group, kw_policy, kw_list)
             #run_kpabe(pairing_group, kw_list, kw_policy, attr_list, attr_policy, msg)
       

@@ -13,7 +13,7 @@ from FEASE_PAEKS import PAEKS_DL
 from FEASE_KPABE import Anonymous_KP_ABE
 from cwdwl17 import KPabe_search
 from mznlhs17 import MZNLHS17
-from tfl19 import TFL19
+
 
 def run_peks(peks, kw_list, kw_policy):
     (pk, sk) = peks.setup()
@@ -147,7 +147,7 @@ def main():
     kw_list, kw_policy, attr_list, attr_policy = create_list_and_policy(list_size, policy_size)
     
     #kw_list = ['1001:1', '1002:2', '1003:3', '1004:4', '1005:5', '1006:6', '1007:7', '1008:8', '1009:9', '1010:10']   
-    #kw_policy = '(1001:1 and 1002:2) or (1003:3 and 1004:4) or 1005:5 or 1006:6 or (1007:7 and 1008:8)'   
+    #kw_policy = '(1001:1 and 1002:2) or (1003:3 and 1004:4)'   
     #attr_list = ['1001:1', '1002:2', '1003:3', '1004:4']   
     #attr_policy = '(1001:1 and 1002:2) or (1003:3 and 1004:4)' 
     
@@ -170,19 +170,19 @@ def main():
     kp_abe_1 = Anonymous_KP_ABE(pairing_group)
     subsets_5, result_5 = run_kpabe(kp_abe_1, kw_list, kw_policy, msg)  
             
-    ac17_kp = AC17KPABE(pairing_group, 2)
-    subsets_6, result_6 = run_kpabe(ac17_kp, attr_list, attr_policy, msg)  
+    #ac17_kp = AC17KPABE(pairing_group, 2)
+    #subsets_6, result_6 = run_kpabe(ac17_kp, attr_list, attr_policy, msg)  
     
-    fabeo22_kp = FABEO22KPABE(pairing_group)
-    subsets_7, result_7 = run_kpabe(fabeo22_kp, attr_list, attr_policy, msg)  
+    #fabeo22_kp = FABEO22KPABE(pairing_group)
+    #subsets_7, result_7 = run_kpabe(fabeo22_kp, attr_list, attr_policy, msg)  
     
     print(subsets_1, result_1)
     print(subsets_2, result_2)
     print(subsets_3, result_3) 
     print(subsets_4, result_4)     
     print(subsets_5, result_5)
-    print(subsets_6, result_6)
-    print(subsets_7, result_7)
+    #print(subsets_6, result_6)
+    #print(subsets_7, result_7)
     
 if __name__ == "__main__":
     debug = True
