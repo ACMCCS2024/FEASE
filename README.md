@@ -1,6 +1,6 @@
 # FEASE: Fast-and-Expressive-Asymmetric-Searchable-Encryption
 
-This is the code repository accompanying our paper "FEASE: Fast and Expressive Asymmetric Searchable Encryption" by Long Meng, Liqun Chen, Yangguang Tian, Mark Manulis, and Suhui Liu.
+This is the code repository accompanying our paper "FEASE: Fast and Expressive Asymmetric Searchable Encryption".
 
 Asymmetric Searchable Encryption (ASE) enables keyword search on encrypted data and has a large number of practical applications. This paper presents a fast and expressive ASE scheme named FEASE that allows data users to search for any monotonic Boolean search queries, which achieves the state-of-the-art efficiency in the expressive ASE field. Besides, we also propose two applications of FEASE: 1) The first expressive Public-Key Authenticated Encryption with Keyword Search (PAEKS) and 2) A fast and expressive Anonymous Key-Policy Attribute-Based Encryption (KP-ABE) scheme. Both of them share the same efficiency and expressiveness of FEASE. 
 
