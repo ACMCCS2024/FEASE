@@ -6,7 +6,7 @@ Ru Meng, Yanwei Zhou, Jianting Ning, Kaitai Liang, Jinguang Han, Willy Susilo
 | type:           KP-ABE based PEKS
 | setting:        Type-III pairing
 
-:Authors:    Long Meng
+:Authors:    
 :Date:       27/04/2023
 '''
 from charm.toolbox.pairinggroup import PairingGroup,ZR,G1,G2,GT,pair
