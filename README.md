@@ -1,10 +1,8 @@
 # FEASE: Fast-and-Expressive-Asymmetric-Searchable-Encryption
 
-This is the code repository accompanying our paper "FEASE: Fast and Expressive Asymmetric Searchable Encryption".
+This is the code for the paper "FEASE: Fast and Expressive Asymmetric Searchable Encryption".
 
-Asymmetric Searchable Encryption (ASE) enables keyword search on encrypted data and has a large number of practical applications. This paper presents a fast and expressive ASE scheme named FEASE that allows data users to search for any monotonic Boolean search queries, which achieves the state-of-the-art efficiency in the expressive ASE field. Besides, we also propose two applications of FEASE: 1) The first expressive Public-Key Authenticated Encryption with Keyword Search (PAEKS) and 2) A fast and expressive Anonymous Key-Policy Attribute-Based Encryption (KP-ABE) scheme. Both of them share the same efficiency and expressiveness of FEASE. 
-
-We implement our schemes and demonstrate that they perform better than the state-of-the-art (Cui et al., TDSC 2016, Meng et al., ProvSec 2017) on all parameters of practical interest, and our anonymous KP-ABE scheme is even comparable to the non-anonymous KP-ABE schemes in FAME (Agrawal et al., CCS 2017) and FABEO (Riepel et al., CCS 2022). 
+Asymmetric Searchable Encryption (ASE) enables keyword search on encrypted data and has a large number of practical applications. This paper presents a fast and expressive ASE scheme named FEASE that allows data users to search for any monotonic Boolean search queries, which achieves the state-of-the-art efficiency in the expressive ASE field. Besides, there are two applications of FEASE: 1) The first expressive Public-Key Authenticated Encryption with Keyword Search (PAEKS) and 2) A fast and expressive Anonymous Key-Policy Attribute-Based Encryption (KP-ABE) scheme. Both of them share the same efficiency and expressiveness of FEASE. 
 
 The code uses the Charm library and Python and builds upon the code of [FABEO] https://github.com/DoreenRiepel/FABEO (2022). We provide the implementation of the following schemes:
 
